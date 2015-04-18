@@ -1,12 +1,13 @@
 'use strict';
 
 var gulp = require('gulp');
-
-// Gulp 4.0 recipe
 var HubRegistry = require('gulp-hub');
+
+// load some files into the registry
 var hub = new HubRegistry(['tasks/*.js']);
+
+// tell gulp to use the tasks just loaded
 gulp.registry(hub);
 
-// Contents of default.js task - delete the default.js task file, uncomment the line below, and the default gulp task should work
-
-// gulp.task('default', gulp.series('clean', 'scripts'));
+// 'clean' and 'scripts' tasks defined in tasks directory
+gulp.task('default', gulp.series('clean', 'scripts'));
