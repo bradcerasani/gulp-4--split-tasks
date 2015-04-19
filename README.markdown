@@ -10,7 +10,7 @@ While sequencing is still being discussed in [#972](https://github.com/gulpjs/gu
 
 Standalone tasks are defined in the `tasks` directory, and `gulp-hub` is used to create a new registry. Tasks that use a combination of sub-tasks are now defined in the gulpfile, after `gulp.registry`
 
-While this will require a minor restructuring of tasks in some projects, I actually prefer defining composite tasks like `default`, `watch`, and `build` in my `gulpfile` and using the `tasks` directory strictly for standalone tasks. In larger gulpfiles composite tasks are typically short and called far more frequently than their standalone siblings, so it's easier to reference them in one place instead of [mixing them](https://github.com/greypants/gulp-starter/tree/master/gulp/tasks) with others.
+While this will require a minor restructuring of tasks in some projects, I actually prefer defining composite tasks like `default`, `watch`, and `build` in my `gulpfile` and using the `tasks` directory strictly for standalone tasks. In larger gulpfiles composite tasks are typically short and called far more frequently than their standalone siblings, so IMO it's easier to reference them in one place.
 
 **File structure (unchanged):**
 
